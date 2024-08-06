@@ -1,0 +1,28 @@
+package com.aurionpro.state.model;
+
+public class Ordered implements IPacketState{
+	
+	private String state = "ordered";
+
+	@Override
+	public IPacketState next(Packet packet) {
+		return new Dispatched();
+	}
+
+	@Override
+	public IPacketState current(Packet packet) {
+		return new Ordered();
+	}
+
+	@Override
+	public IPacketState previous(Packet packet) {
+		return new Ordered();
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	
+
+}

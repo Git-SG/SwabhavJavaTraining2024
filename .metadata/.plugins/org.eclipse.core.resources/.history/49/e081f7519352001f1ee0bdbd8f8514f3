@@ -1,0 +1,9 @@
+package com.aurionpro.model;
+
+public class Board {
+	
+	public void createBoard() {
+		System.out.println(1 + " | " + 2 + " | " + 3 + "\n" + "_________\n" + 4 + " | " + 4 + " | " + 6 + "_________\n" + "\n" + 7 + " | " + 8 + " | " + 9);
+	}
+
+}

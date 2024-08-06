@@ -1,0 +1,15 @@
+package com.aurionpro.srp.solution.model;
+
+public class InvoiceTaxCalculator {
+	
+	private Invoice invoice;
+
+	public InvoiceTaxCalculator(Invoice invoice) {
+		this.invoice = invoice;
+	}
+	
+	public double calculateTax (double amount) {
+		return amount * tax / 100.0;
+	}
+
+}

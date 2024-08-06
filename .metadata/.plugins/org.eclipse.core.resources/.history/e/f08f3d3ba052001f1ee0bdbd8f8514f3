@@ -1,0 +1,63 @@
+package com.aurionpro.test;
+
+import java.util.Scanner;
+
+import com.aurionpro.model.Board;
+
+public class GameTest {
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		char[][] board = new char[3][3];
+
+		for (int row = 0; row < board.length; row++) {
+			for (int column = 0; column < board[0].length; column++) {
+				board[row][column] = ' ';
+			}
+		}
+
+		char player = 'X';
+
+		boolean gameOver = false;
+
+		while (!gameOver) {
+			printboard(board);
+			System.out.println("Player " + player + " select a coordinate");
+			System.out.println("Select row number");
+			int row = scanner.nextInt();
+			System.out.println("Select column number");
+			int column = scanner.nextInt();
+
+			if (board[row][column] == 0) {
+				board[row][column] = player;
+				gameOver = haveWon(board, player);
+				if (gameOver) {
+					System.out.println("Player " + player + " has won");
+					break;
+				}
+				player = (player == 'X') ? 'O' : 'X';
+				continue;
+			}
+
+			System.out.println("Enter a valid move");
+		}
+
+		printboard(board);
+
+	}
+
+	public static boolean haveWon(char[][] board, char player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public static void printboard(char[][] board) {
+		for (int row = 0; row < board.length; row++) {
+			for (int column = 0; column < board[0].length; column++) {
+				System.out.println(board[row][column] + " ");
+			}
+		}
+	}
+
+}

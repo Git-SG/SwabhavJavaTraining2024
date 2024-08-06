@@ -1,0 +1,8 @@
+package com.aurionpro.adapter.model;
+
+public interface IItem {
+	
+	void getItemName();
+	void getItemPrice();
+
+}

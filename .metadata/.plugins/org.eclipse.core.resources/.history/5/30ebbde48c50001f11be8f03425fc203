@@ -1,0 +1,19 @@
+package com.aurionpro.decorator.test;
+
+import com.aurionpro.decorator.model.GoldenHat;
+import com.aurionpro.decorator.model.IHat;
+import com.aurionpro.decorator.model.StandardHat;
+
+public class HatTest {
+	public static void main(String[] args) {
+		IHat hat = new StandardHat();
+		
+		IHat goldenHat = new GoldenHat(hat);
+		
+		System.out.println("Name: " + goldenHat.getName());
+		System.out.println("Price: " + goldenHat.getPrice());
+		System.out.println("Description: " + goldenHat.getDescription());
+		 
+	}
+
+}

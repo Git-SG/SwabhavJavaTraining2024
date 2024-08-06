@@ -1,0 +1,11 @@
+package com.aurionpro.test;
+
+import com.aurionpro.model.Board;
+
+public class GameTest {
+	public static void main(String[] args) {
+		Board board = new Board();
+		board.createBoard2(board.getMatrix());
+	}
+
+}

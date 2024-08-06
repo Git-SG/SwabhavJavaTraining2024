@@ -1,0 +1,16 @@
+package com.aurionpro.facade.model;
+
+public class SoundSystem implements ISystem {
+
+	@Override
+	public void start() {
+		System.out.println("Sound System has started");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("Sound System has stopped");
+
+	}
+
+}

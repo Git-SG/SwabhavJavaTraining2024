@@ -1,0 +1,33 @@
+package com.aurionpro.model;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.aurionpro.exception.RowNotValidException;
+
+class GameControllerTest {
+	
+	GameController controller;
+	
+	@BeforeEach
+	void init() {
+		controller = new GameController();
+	}
+	
+	@AfterEach
+	void status() {
+		System.out.println("Tested successfully");
+	}
+
+	@Test
+	void testPlayTurn() {
+		int row = 5;
+		if(row > 2 || row < 0)
+			throw new RowNotValidException();
+		assertThrows(RowNotValidException.class, ()->controller.getGame().addMark(4, 2, 'X'));
+	}
+
+}

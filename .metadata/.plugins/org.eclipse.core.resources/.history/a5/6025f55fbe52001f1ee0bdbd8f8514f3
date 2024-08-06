@@ -1,0 +1,64 @@
+package com.aurionpro.model;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class GameTest {
+
+	@Test
+	void testGame() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCreateEmptyBoard() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCreateColumns() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testPrintBoard() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testAddMark() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSwitchPlayer() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testIsRowSame() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testIsColumnSame() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testIsDiagonalSame() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testIsGameOver() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testIsBoardFull() {
+		fail("Not yet implemented");
+	}
+
+}

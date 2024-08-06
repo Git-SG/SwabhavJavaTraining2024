@@ -1,0 +1,14 @@
+package com.aurionpro.observer.model;
+
+import com.aurionpro.observer.exception.InsufficientFundsException;
+
+public class ExceptionNotifier implements INotifier{
+
+	@Override
+	public void notify(Account account, String Type) {
+		System.out.println(new InsufficientFundsException().getMessage());		
+	}
+	
+	
+
+}

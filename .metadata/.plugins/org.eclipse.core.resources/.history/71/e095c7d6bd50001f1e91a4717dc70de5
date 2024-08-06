@@ -1,0 +1,27 @@
+package com.aurionpro.state.model;
+
+public class Delivered implements IPacketState{
+	
+	private String state = "delivered";
+
+
+	@Override
+	public IPacketState next(Packet packet) {
+		return new Delivered();
+	}
+
+	@Override
+	public IPacketState current(Packet packet) {
+		return new Delivered();
+	}
+
+	@Override
+	public IPacketState previous(Packet packet) {
+		return new Dispatched();
+	}
+	
+	public String getState() {
+		return state;
+	}
+
+}

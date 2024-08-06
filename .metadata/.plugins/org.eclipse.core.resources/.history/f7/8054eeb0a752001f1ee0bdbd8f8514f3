@@ -1,0 +1,42 @@
+package com.aurionpro.model;
+
+public class Game {
+	
+	private char[][] board;
+
+	public Game() {
+		super();
+		board = new char[3][3];
+		createEmptyBoard();
+	}
+
+	public void createEmptyBoard() {
+		for(int row = 0; row < board.length; row++)
+			for(int column = 0; column < board[0].length; column++)
+				board[row][column] = ' '; 
+	}
+	
+	public void printBoard() {
+		System.out.println("-------------");
+		for(int row = 0; row < board.length; row++) {
+			System.out.print("| ");
+			for(int column = 0; column < board[0].length; column++)
+			{
+				System.out.print(board[row][column] + " | ");
+			}
+			System.out.println();
+			System.out.println("-------------");
+		}
+	}
+	
+	public void addMark(int row, int column, char player) {		
+		if(board[row][column] != ' ')
+			return;
+		board[row][column] = player;
+	}
+	
+
+	
+}
+
+

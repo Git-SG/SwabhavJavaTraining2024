@@ -1,0 +1,12 @@
+package com.aurionpro.proxy.model;
+
+public class ProxyStudent implements IStudent {
+
+	private Student student;
+
+	@Override
+	public void study() {
+		System.out.println(student.getName() + " is studying");
+	}
+
+}

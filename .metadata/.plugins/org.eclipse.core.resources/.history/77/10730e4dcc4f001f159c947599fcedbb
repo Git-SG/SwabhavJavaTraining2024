@@ -1,0 +1,47 @@
+package com.aurionpro.builder.model;
+
+public class Student {
+	
+	private String schoolName;
+	private int std;
+	private char division;
+	private int age;
+	private int rollNumber;
+	private String name;
+	
+	public Student(String schoolName, int std, char division, int age, int rollNumber, String name) {
+		this.schoolName = schoolName;
+		this.std = std;
+		this.division = division;
+		this.age = age;
+		this.rollNumber = rollNumber;
+		this.name = name;
+	}
+
+	public void setSchoolName(String schoolName) {
+		this.schoolName = schoolName;
+	}
+
+	public void setStd(int std) {
+		this.std = std;
+	}
+
+	public void setDivision(char division) {
+		this.division = division;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public void setRollNumber(int rollNumber) {
+		this.rollNumber = rollNumber;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+
+}

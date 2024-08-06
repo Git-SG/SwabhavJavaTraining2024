@@ -1,0 +1,14 @@
+package com.aurionpro.observer.model;
+
+public class SMSNotifier implements INotifier{
+	
+	private Account account;
+
+	@Override
+	public void notify(Account account) {
+		System.out.println("Current balance is " + account.getBalance());
+	}
+	
+	
+
+}

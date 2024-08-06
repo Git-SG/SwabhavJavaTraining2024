@@ -1,0 +1,34 @@
+package com.aurionpro.model;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.aurionpro.exception.PositionNotEmptyException;
+import com.aurionpro.exception.RowNotValidException;
+
+class GameControllerTest {
+	
+	GameController controller;
+	
+	@BeforeEach
+	void init() {
+		controller = new GameController();
+	}
+	
+	@AfterEach
+	void status() {
+		System.out.println("Tested successfully");
+	}
+
+	@Test
+	void testPlayTurn() {
+		if(controller.getGame().getBoard()[1][1] != ' ')
+			throw new PositionNotEmptyException();
+		controller.getGame().addMark(1, 1, 'X');
+		assertThrows(PositionNotEmptyException.class, ()->controller.getGame().addMark(1, 1, 'O'));
+	}
+
+}

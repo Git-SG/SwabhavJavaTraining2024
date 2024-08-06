@@ -1,0 +1,16 @@
+package com.aurionpro.adapter.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.aurionpro.adapter.model.IItem;
+import com.aurionpro.adapter.model.ShoppingCart;
+
+public class CartTest {
+	public static void main(String[] args) {
+		List<IItem> cartItems = new ArrayList();
+		
+		ShoppingCart cart = new ShoppingCart(cartItems);
+	}
+
+}

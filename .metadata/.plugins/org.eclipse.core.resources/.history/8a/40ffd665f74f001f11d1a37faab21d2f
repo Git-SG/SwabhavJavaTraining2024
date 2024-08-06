@@ -1,0 +1,16 @@
+package com.aurionpro.decorator.model;
+
+public abstract class CarServiceDecorator implements ICarService{
+	
+	private ICarService carObj;
+
+	public CarServiceDecorator(ICarService carObj) {
+		this.carObj = carObj;
+	}
+
+	@Override
+	public abstract double getCost();
+	
+	
+
+}

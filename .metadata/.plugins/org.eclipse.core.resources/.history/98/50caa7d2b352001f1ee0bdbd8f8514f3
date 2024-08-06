@@ -1,0 +1,22 @@
+package com.aurionpro.test;
+
+import java.util.Scanner;
+
+import com.aurionpro.model.Game;
+import com.aurionpro.model.GameController;
+
+public class GameTest {
+	public static void main(String[] args) {
+//		Game game = new Game();
+//		
+//		game.printBoard();
+		
+		Scanner scanner = new Scanner(System.in); 
+		
+		GameController game = new GameController();
+		
+		game.startGame(scanner);
+		
+	}
+		
+}

@@ -1,0 +1,12 @@
+package com.aurionpro.facade.model;
+
+public class IndianMenu implements IMenu{
+
+	@Override
+	public void displayMenu() {
+		System.out.println("1.Roti n/2.Paneer Tikka Masala n/3.Pulav");
+	}
+	
+	
+
+}

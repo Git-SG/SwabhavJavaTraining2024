@@ -1,0 +1,8 @@
+package com.aurionpro.facade.model;
+
+public interface IDevices {
+	
+	void on();
+	void off();
+
+}

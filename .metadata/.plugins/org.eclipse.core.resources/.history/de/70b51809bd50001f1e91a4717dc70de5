@@ -1,0 +1,25 @@
+package com.aurionpro.state.model;
+
+public class Delivered implements IPacketState{
+
+	@Override
+	public IPacketState next(Packet packet) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IPacketState current(Packet packet) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IPacketState previous(Packet packet) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

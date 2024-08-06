@@ -1,0 +1,24 @@
+package com.aurionpro.creational.factory.model;
+
+public class CarFactory {
+		
+	public ICar createCar(String type) {
+		ICar car = null;
+		
+		if(type.equalsIgnoreCase("Maruti")) {
+			car = new Maruti();
+		}
+		
+		if(type.equalsIgnoreCase("Mahindra")) {
+			car = new Mahindra();
+		}
+		
+		if(type.equalsIgnoreCase("Tata")) {
+			car = new Tata();
+		}
+		
+		return car;
+		
+		}
+
+}

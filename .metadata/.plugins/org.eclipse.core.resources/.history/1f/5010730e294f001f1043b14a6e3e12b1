@@ -1,0 +1,11 @@
+package com.aurionpro.creational.factory.model;
+
+public class TataFactory implements IFactory{
+	
+	@Override
+	public ICar createCar() {
+		ICar car = new Tata();
+		return car;
+	}
+
+}

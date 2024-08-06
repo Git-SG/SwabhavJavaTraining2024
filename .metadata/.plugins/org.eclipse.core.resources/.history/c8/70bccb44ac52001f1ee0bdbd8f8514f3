@@ -1,0 +1,15 @@
+package com.aurionpro.test;
+
+import java.util.Scanner;
+
+import com.aurionpro.model.Board;
+import com.aurionpro.model.Game;
+
+public class GameTest {
+	public static void main(String[] args) {
+		Game game = new Game();
+		
+		game.printBoard();
+	}
+		
+}

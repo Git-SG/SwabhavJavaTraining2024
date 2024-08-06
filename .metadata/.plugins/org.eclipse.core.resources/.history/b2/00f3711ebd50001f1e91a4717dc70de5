@@ -1,0 +1,22 @@
+package com.aurionpro.state.model;
+
+public class Dispatched implements IPacketState{
+
+	@Override
+	public IPacketState next(Packet packet) {
+		return new Delivered();
+	}
+
+	@Override
+	public IPacketState current(Packet packet) {
+		return new Dispatched();
+	}
+
+	@Override
+	public IPacketState previous(Packet packet) {
+		return new Ordered();
+	}
+
+
+
+}

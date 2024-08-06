@@ -1,0 +1,30 @@
+package com.aurionpro.model;
+
+import java.util.Scanner;
+
+public class GameController {
+	
+	private Game game;
+	boolean gameOver = false;
+
+	public GameController() {
+		game = new Game();
+	}
+	
+	public void startGame(Scanner scanner) {
+		game.printBoard();
+		System.out.println("Player " + game.getPlayer() + " select a position: ");
+		int row = scanner.nextInt();
+		int column = scanner.nextInt();
+		
+	}
+	
+	public void isGameOver() {
+		if(game.isRowSame() || game.isColumnSame() || game.isDiagonalSame())
+			gameOver = true;
+				
+	}
+	
+	
+
+}

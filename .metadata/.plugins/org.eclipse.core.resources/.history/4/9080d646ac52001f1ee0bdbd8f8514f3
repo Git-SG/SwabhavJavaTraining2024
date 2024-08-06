@@ -1,0 +1,21 @@
+package com.aurionpro.model;
+
+public class GameController {
+	
+	private Game game;
+
+	public GameController(Game game) {
+		game = new Game();
+	}
+	
+	public void startGame() {
+		game.printBoard();
+		System.out.println("Player " + game.getPlayer() + " select a position: ");
+		
+	}
+	
+	
+	
+	
+
+}

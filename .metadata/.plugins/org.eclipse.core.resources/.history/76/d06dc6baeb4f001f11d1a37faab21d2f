@@ -1,0 +1,28 @@
+package com.aurionpro.facade.model;
+
+public class DVDPlayer implements IDevice, ISystem {
+
+	@Override
+	public void start() {
+		System.out.println("DVD Player has started");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("DVD Player has stopped");
+
+	}
+
+	@Override
+	public void on() {
+		System.out.println("DVD Player is on");
+
+	}
+
+	@Override
+	public void off() {
+		System.out.println("DVD Player is off");
+
+	}
+
+}

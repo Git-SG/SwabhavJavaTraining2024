@@ -1,0 +1,16 @@
+package com.aurionpro.model;
+
+public class Game {
+	
+	private Board board = new Board();
+	private char[][] matrix = board.getMatrix();
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

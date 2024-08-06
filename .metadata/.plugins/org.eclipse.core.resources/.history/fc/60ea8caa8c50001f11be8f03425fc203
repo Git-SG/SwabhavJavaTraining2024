@@ -1,0 +1,13 @@
+package com.aurionpro.decorator.test;
+
+import com.aurionpro.decorator.model.IHat;
+import com.aurionpro.decorator.model.StandardHat;
+
+public class HatTest {
+	public static void main(String[] args) {
+		IHat hat = new StandardHat();
+		
+		
+	}
+
+}

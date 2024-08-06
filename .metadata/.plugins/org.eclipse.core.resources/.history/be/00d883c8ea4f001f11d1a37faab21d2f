@@ -1,0 +1,26 @@
+package com.aurionpro.facade.model;
+
+public class Remote {
+
+	DVDPlayer dvd = new DVDPlayer();
+	Projector projector = new Projector();
+	SoundSystem system = new SoundSystem(5);
+
+	public void startMovie() {
+		dvd.on();
+		projector.on();
+		system.start();
+		dvd.start();
+
+		System.out.println("Movie has started.");
+	}
+
+	public void stopMovie() {
+		dvd.stop();
+		system.stop();
+		projector.off();
+		dvd.off();
+		System.out.println("Movie has stopped.");
+	}
+
+}

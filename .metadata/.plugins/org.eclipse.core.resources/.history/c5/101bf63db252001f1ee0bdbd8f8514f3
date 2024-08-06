@@ -1,0 +1,41 @@
+package com.aurionpro.model;
+
+import java.util.Scanner;
+
+import com.aurionpro.exception.ColumnNotValidException;
+import com.aurionpro.exception.PositionNotEmptyException;
+import com.aurionpro.exception.RowNotValidException;
+
+public class GameController {
+
+	private Game game;
+	boolean gameOver = false;
+
+	public GameController() {
+		game = new Game();
+	}
+
+	public void startGame(Scanner scanner) {
+		while (!gameOver) {
+			game.printBoard();
+			System.out.println("Player " + game.getPlayer() + " select a position: ");
+			int row = scanner.nextInt();
+			if(row > 2 || row < 0)
+				throw new RowNotValidException();
+			int column = scanner.nextInt();
+			if(column > 2 || column < 0)
+				throw new ColumnNotValidException();
+			if(game.getBoard()[row][column] != ' ')
+				throw new PositionNotEmptyException();
+			game.addMark(row, column, game.getPlayer());
+			game.switchPlayer();
+			if(game.isGameOver()) {
+				game.switchPlayer();
+				System.out.println("Player " + game.getPlayer() + " wins the game!");
+				break;
+			}
+		}
+
+	}
+
+}
